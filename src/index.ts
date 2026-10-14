@@ -675,7 +675,9 @@ function collapse(s: string): string {
  *
  * Artist bios/genres/formed-year/country, album info + artwork URLs, and track
  * listings. Complements MusicBrainz by adding artwork URLs and biographies.
- * Uses the free public test API key "2".
+ * Uses the free public test API key "123" — TheAudioDB retired the older
+ * "2" test key (every endpoint now answers 404 "Not found" for it; verified
+ * live 2026-10-14), with "123" still live and unrestricted on v1.
  */
 
 
@@ -687,7 +689,7 @@ async function pwFetch(url: string | URL, init?: RequestInit): Promise<Response>
   return fetchWithTimeout(url, init ?? {}, 'TheAudioDB');
 }
 
-const BASE = 'https://www.theaudiodb.com/api/v1/json/2';
+const BASE = 'https://www.theaudiodb.com/api/v1/json/123';
 const UA = 'pipeworx/1.0 (+https://pipeworx.io)';
 
 const tools: McpToolExport['tools'] = [
