@@ -1,12 +1,20 @@
 {
   "name": "@pipeworx/mcp-theaudiodb",
-  "version": "0.1.3",
+  "version": "0.2.0",
   "description": "TheAudioDB MCP — community music metadata database.",
   "type": "module",
-  "main": "src/index.ts",
-  "types": "src/index.ts",
+  "main": "lib/index.js",
+  "exports": {
+    ".": "./lib/index.js",
+    "./tools.json": "./tools.json",
+    "./package.json": "./package.json"
+  },
   "bin": {
     "mcp-theaudiodb": "bin/cli.js"
+  },
+  "files": ["bin/", "lib/", "tools.json", "server.json"],
+  "engines": {
+    "node": ">=18"
   },
   "keywords": ["mcp", "mcp-server", "model-context-protocol", "pipeworx", "theaudiodb"],
   "license": "MIT",
@@ -14,19 +22,12 @@
     "type": "git",
     "url": "git+https://github.com/pipeworx-io/mcp-theaudiodb.git"
   },
-  "scripts": {
-    "typecheck": "tsc --noEmit"
-  },
-  "dependencies": {
-    "@modelcontextprotocol/sdk": "^1.30.0",
-    "tsx": "^4.19.0"
-  },
-  "devDependencies": {
-    "typescript": "^5.9.3",
-    "@cloudflare/workers-types": "^4.20260405.1"
-  },
+  "mcpName": "io.github.pipeworx-io/theaudiodb",
   "pipeworx": {
-    "sourceHash": "v1-e1ddf11380ea31aa35016821d2130c2a3ae25ce879a368c429bf65f32f3c0e1d",
-    "sourceCommit": "4f465027cf3de54acf4976d8118ae3423a8ec9fa"
+    "mode": "gateway",
+    "slug": "theaudiodb",
+    "gatewaySlug": "theaudiodb",
+    "sourceHash": "v1-80b6789323637289c35ea2e27319c30eac8c25c549088226327a30a3a6dbfba1",
+    "sourceCommit": "f47d581679e1e887373df51ba623f891fbe4c464"
   }
 }

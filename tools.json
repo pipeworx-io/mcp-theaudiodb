@@ -1,0 +1,70 @@
+[
+  {
+    "name": "search_artist",
+    "description": "Search TheAudioDB for a music artist/band by name. Returns metadata: genre, style, mood, year formed, country, official website, English biography, and artist thumbnail image URL. Music-metadata lookup — complements MusicBrainz with biographies and artwork.",
+    "inputSchema": {
+      "type": "object",
+      "properties": {
+        "artist": {
+          "type": "string",
+          "description": "Artist or band name, e.g. \"Coldplay\"."
+        }
+      },
+      "required": [
+        "artist"
+      ]
+    }
+  },
+  {
+    "name": "search_album",
+    "description": "Search TheAudioDB for albums by artist (optionally narrowed to a specific album title). Returns album id, title, artist, release year, genre, album cover artwork URL, and English description. Omit the album arg to list all albums for the artist.",
+    "inputSchema": {
+      "type": "object",
+      "properties": {
+        "artist": {
+          "type": "string",
+          "description": "Artist or band name, e.g. \"Coldplay\"."
+        },
+        "album": {
+          "type": "string",
+          "description": "Optional album title to narrow the search, e.g. \"Parachutes\"."
+        }
+      },
+      "required": [
+        "artist"
+      ]
+    }
+  },
+  {
+    "name": "get_artist",
+    "description": "Look up a single TheAudioDB artist by its idArtist (as returned by search_artist). Returns the same metadata fields as search_artist: genre, style, mood, formed year, country, website, biography, and thumbnail URL.",
+    "inputSchema": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "string",
+          "description": "TheAudioDB idArtist, e.g. \"111239\"."
+        }
+      },
+      "required": [
+        "id"
+      ]
+    }
+  },
+  {
+    "name": "get_album_tracks",
+    "description": "List all tracks on a TheAudioDB album by its idAlbum (as returned by search_album). Returns each track id, title, track number, duration in milliseconds, genre, and music-video URL when available.",
+    "inputSchema": {
+      "type": "object",
+      "properties": {
+        "album_id": {
+          "type": "string",
+          "description": "TheAudioDB idAlbum, e.g. \"2109615\"."
+        }
+      },
+      "required": [
+        "album_id"
+      ]
+    }
+  }
+]
