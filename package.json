@@ -1,6 +1,6 @@
 {
   "name": "@pipeworx/mcp-theaudiodb",
-  "version": "0.2.0",
+  "version": "0.2.1",
   "description": "TheAudioDB MCP — community music metadata database.",
   "type": "module",
   "main": "lib/index.js",
@@ -27,7 +27,7 @@
     "mode": "gateway",
     "slug": "theaudiodb",
     "gatewaySlug": "theaudiodb",
-    "sourceHash": "v1-80b6789323637289c35ea2e27319c30eac8c25c549088226327a30a3a6dbfba1",
-    "sourceCommit": "f47d581679e1e887373df51ba623f891fbe4c464"
+    "sourceHash": "v1-741df128a8c62aa48cfd2ae137e6173a3d47b3afc2f8e11efdcd5c932918560c",
+    "sourceCommit": "868e119d526d5409447b7ee2149afba7eb9d2593"
   }
 }

@@ -3,7 +3,7 @@
   "name": "io.github.pipeworx-io/theaudiodb",
   "title": "Theaudiodb",
   "description": "TheAudioDB MCP — community music metadata database.",
-  "version": "0.2.0",
+  "version": "0.2.1",
   "websiteUrl": "https://pipeworx.io/packs/theaudiodb",
   "repository": {
     "url": "https://github.com/pipeworx-io/mcp-theaudiodb",
